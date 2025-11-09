@@ -22,6 +22,8 @@ cd Super_Eats
 ```bash
 cd backend
 npm install
+# Create a .env file with:
+PORT=3000
 npm start
 ```
 
