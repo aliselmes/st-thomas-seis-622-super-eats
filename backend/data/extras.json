@@ -1,0 +1,38 @@
+[
+  {
+    "id": 5,
+    "name": "Lemonade",
+    "category": "extra",
+    "price": 2.99
+  },
+  {
+    "id": 6,
+    "name": "Coca-Cola",
+    "category": "extra",
+    "price": 2.99
+  },
+  {
+    "id": 7,
+    "name": "Water",
+    "category": "extra",
+    "price": 1.99
+  },
+  {
+    "id": 8,
+    "name": "Orange Juice",
+    "category": "extra",
+    "price": 3.49
+  },
+  {
+    "id": 9,
+    "name": "Utensils",
+    "category": "extra",
+    "price": 0.00
+  },
+  {
+    "id": 10,
+    "name": "Bag of Chips",
+    "category": "extra",
+    "price": 2.49
+  }
+]
