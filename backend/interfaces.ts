@@ -1,4 +1,4 @@
-export interface MenuItem {
+export interface IMenuItem {
     id: number;
     name: string;
     category: string;
@@ -7,14 +7,14 @@ export interface MenuItem {
     price: number;
 }
 
-export interface Extra {
+export interface IExtra {
     id: number;
     name: string;
     category: string;
     price: number;
 }
 
-export interface CartItem {
+export interface ICartItem {
     id: number;
     menuItemId: number;
     name: string;
