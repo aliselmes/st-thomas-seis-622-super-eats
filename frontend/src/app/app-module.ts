@@ -5,10 +5,24 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Pizza } from './pizza/pizza';
+import { Burger } from './burger/burger';
+import { Hotdog } from './hotdog/hotdog';
+import { Pasta } from './pasta/pasta';
+import { Extras } from './extras/extras';
+import { Cartfooditems } from './cartfooditems/cartfooditems';
+import { Cartextras } from './cartextras/cartextras';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Pizza,
+    Burger,
+    Hotdog,
+    Pasta,
+    Extras,
+    Cartfooditems,
+    Cartextras
   ],
   imports: [
     BrowserModule,
