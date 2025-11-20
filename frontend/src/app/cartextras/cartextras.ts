@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cartextras',
@@ -11,5 +11,6 @@ import { Component } from '@angular/core';
   styles: ``,
 })
 export class Cartextras {
+  @Input()
   public extrasCounter: number = 1;
 }
