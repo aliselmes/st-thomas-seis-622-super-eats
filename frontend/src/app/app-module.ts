@@ -12,6 +12,10 @@ import { Pasta } from './pasta/pasta';
 import { Extras } from './extras/extras';
 import { Cartfooditems } from './cartfooditems/cartfooditems';
 import { Cartextras } from './cartextras/cartextras';
+import { Navbar } from './components/navbar/navbar';
+import { Menu } from './components/menu/menu';
+import { MenuItem } from './components/menu-item/menu-item';
+import { Cart } from './components/cart/cart';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { Cartextras } from './cartextras/cartextras';
     Pasta,
     Extras,
     Cartfooditems,
-    Cartextras
+    Cartextras,
+    Navbar,
+    Menu,
+    MenuItem,
+    Cart
   ],
   imports: [
     BrowserModule,
