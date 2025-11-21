@@ -44,7 +44,6 @@ export class CartService {
   updateCartCount(): void {
     this.getCart().subscribe({
       next: (cart) => {
-        // Simple for loop
         let count = 0;
         for (let item of cart) {
           count += item.quantity;

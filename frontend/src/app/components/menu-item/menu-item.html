@@ -1,1 +1,9 @@
-<p>menu-item works!</p>
+<div class="menu-item-card">
+    <h2>{{item.name}}</h2>
+    <p>Ingredients:</p>
+    <label *ngFor="let ingredient of item.availableIngredients">
+        <input type="checkbox" name="options" value="1" />{{ingredient}}
+    </label>
+    <p>{{item.price | currency}}</p>
+    <button>Add to Cart</button>
+</div>

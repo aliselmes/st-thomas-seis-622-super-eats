@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MenuService } from '../../services/menu.service';
+import { MenuItem } from '../../models/menu-item';
+import { Extra } from '../../models/extra';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +9,27 @@ import { Component } from '@angular/core';
   templateUrl: './menu.html',
   styleUrl: './menu.css',
 })
-export class Menu {
+export class Menu implements OnInit {
+    public menuItems: MenuItem[] = [];
+    public extras: Extra[] = [];
+
+    constructor(private menuService: MenuService) {}
+
+    ngOnInit(): void {
+      this.loadMenuItems();
+    }
+
+    loadMenuItems(): void {
+      this.menuService.getMenuItems().subscribe({
+        next: (items) => {
+          this.menuItems = items;
+          console.log('Menu items loaded:', items);
+        },
+        error: (error) => {
+          console.log('Error loading items', error);
+        }
+      });
+    }
+
 
 }
