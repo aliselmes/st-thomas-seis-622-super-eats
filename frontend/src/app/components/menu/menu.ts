@@ -17,6 +17,7 @@ export class Menu implements OnInit {
 
     ngOnInit(): void {
       this.loadMenuItems();
+      this.loadExtras();
     }
 
     loadMenuItems(): void {
@@ -27,6 +28,19 @@ export class Menu implements OnInit {
         },
         error: (error) => {
           console.log('Error loading items', error);
+        }
+      });
+    }
+
+    loadExtras(): void {
+      this.menuService.getExtras().subscribe({
+        next: (extras) => {
+          this.extras = extras;
+          console.log('Extras loaded', extras);
+        console.log('Extras length:', extras.length);
+        },
+        error: (error) => {
+          console.log('Error loading extras', error)
         }
       });
     }

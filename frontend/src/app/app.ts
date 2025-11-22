@@ -12,18 +12,18 @@ export class App implements OnInit {
   
   ngOnInit(): void {
     // Test: Add a dummy item to cart
-    const testItem = {
-      id: Date.now(),
-      menuItemId: 1,
-      name: 'Test Pizza',
-      selectedIngredients: ['Cheese', 'Sauce'],
-      price: 12.99,
-      quantity: 2
-    };
+    // const testItem = {
+    //   id: Date.now(),
+    //   menuItemId: 1,
+    //   name: 'Test Pizza',
+    //   selectedIngredients: ['Cheese', 'Sauce'],
+    //   price: 12.99,
+    //   quantity: 2
+    // };
     
-    this.cartService.addToCart(testItem).subscribe(() => {
-      this.cartService.updateCartCount();
-      console.log('Test item added, cart count:', this.cartService.cartCount);
-    });
+    // this.cartService.addToCart(testItem).subscribe(() => {
+    //   this.cartService.updateCartCount();
+    //   console.log('Test item added, cart count:', this.cartService.cartCount);
+    // });
   }
 }

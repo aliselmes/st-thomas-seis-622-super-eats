@@ -1,3 +1,24 @@
 <div class="menu-container">
-    <app-menu-item *ngFor="let item of menuItems" [item]="item"></app-menu-item>
+    <h1 class="menu-title">Menu</h1>
+
+    <div class="menu-grid">
+        <app-menu-item *ngFor="let item of menuItems" [item]="item"></app-menu-item>
+    </div>
+
+    <div *ngIf="extras.length > 0" class="extras-section">
+        <h2>Extras</h2>
+        <div class="extras-grid">
+
+            <div class="extra-item" *ngFor="let extra of extras">
+                <label class="extra-label">
+                    <input type="checkbox">
+                    <span>{{extra.name}}</span>
+                    <span>{{extra.price | currency}}</span>
+                </label>
+            </div>
+
+        </div>
+
+        <button class="add-extras-btn">Add extras to cart</button>
+    </div>
 </div>

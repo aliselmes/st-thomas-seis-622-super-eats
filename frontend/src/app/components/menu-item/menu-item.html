@@ -2,8 +2,8 @@
     <h2>{{item.name}}</h2>
     <p>Ingredients:</p>
     <label *ngFor="let ingredient of item.availableIngredients">
-        <input type="checkbox" name="options" value="1" />{{ingredient}}
+        <input type="checkbox" [checked]="isIngredientSelected(ingredient)" (change)="onIngredientChange(ingredient, $event)" />{{ingredient}}
     </label>
     <p>{{item.price | currency}}</p>
-    <button>Add to Cart</button>
+    <button (click)="addToCart()">Add to Cart</button>
 </div>
