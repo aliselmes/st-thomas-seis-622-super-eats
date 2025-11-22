@@ -76,4 +76,56 @@ export class Cart implements OnInit {
       });
     }
   }
+
+  //remove and item from the cart
+  removeItem(id: number): void {
+    if (confirm('Remove this item from cart?')) {
+      this.cartService.removeItem(id).subscribe({
+        next: () => {
+          //update the cart count
+          this.cartService.updateCartCount();
+          //reload the cart
+          this.loadCart();
+        },
+        error: (error) => {
+          console.error('Error removing item:', error);
+          alert('Failed to remove item!');
+        }
+      });
+    }
+  }
+
+  //increase item quantity when in the cart
+  increaseQuantity(item: CartItem): void {
+    this.cartService.updateQuantity(item.id, item.quantity + 1).subscribe({
+      next: () => {
+        this.cartService.updateCartCount();
+        this.loadCart();
+      },
+      error: (error) => {
+        console.error('Error updating quantity:', error);
+        alert('Failed to update quantity!');
+      }
+    });
+  }
+
+  //decrease item quantity
+  decreaseQuantity(item: CartItem): void {
+    //if quantity is 1, remove the item instead
+    if (item.quantity === 1) {
+      this.removeItem(item.id);
+      return;
+    }
+
+    this.cartService.updateQuantity(item.id, item.quantity - 1).subscribe({
+      next: () => {
+        this.cartService.updateCartCount();
+        this.loadCart();
+      },
+      error: (error) => {
+        console.error('Error updating quantity:', error);
+        alert('Failed to update quantity!');
+      }
+    });
+  }
 }

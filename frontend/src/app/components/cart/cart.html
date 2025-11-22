@@ -18,12 +18,17 @@
             </div>
             <div class="item-price">{{item.price | currency}} each</div>
             <div class="item-total">{{item.price * item.quantity | currency}}</div>
+            <div class="item-controls">
+                <button (click)="decreaseQuantity(item)">-</button>
+                <span>Quantity: {{item.quantity}}</span>
+                <button (click)="increaseQuantity(item)">+</button>
+                <button class="remove-btn" (click)="removeItem(item.id)">Remove</button>
+            </div>
+        </div>
+
+        <!--Total and Checkout-->
+        <div>
+            <p>Total: {{total | currency}}</p>
+            <button class="checkout-button" (click)="checkout()">Submit Order</button>
         </div>
     </div>
-
-    <!--Total and Checkout-->
-    <div>
-        <p>Total: {{total | currency}}</p>
-        <button class="checkout-button" (click)="checkout()">Submit Order</button>
-    </div>
-</div>
