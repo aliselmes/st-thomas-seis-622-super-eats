@@ -1,1 +1,29 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <h1>Cart</h1>
+
+    <!--Empty Cart Message-->
+    <div *ngIf="cartItems.length === 0">
+        <h2>Your cart is empty!</h2>
+        <p>Please add some items from the Menu.</p>
+    </div>
+
+    <!--Display items in the cart-->
+    <div *ngIf="cartItems.length > 0">
+        <h3>Items</h3>
+        <div class="cart-item" *ngFor="let item of cartItems">
+            <h4>{{item.name}}</h4>
+            <div *ngIf="item.selectedIngredients && item.selectedIngredients.length > 0">
+                <h5>Ingredients:</h5>
+                <p>{{item.selectedIngredients.join(', ')}}</p>
+            </div>
+            <div class="item-price">{{item.price | currency}} each</div>
+            <div class="item-total">{{item.price * item.quantity | currency}}</div>
+        </div>
+    </div>
+
+    <!--Total and Checkout-->
+    <div>
+        <p>Total: {{total | currency}}</p>
+        <button class="checkout-button" (click)="checkout()">Submit Order</button>
+    </div>
+</div>
