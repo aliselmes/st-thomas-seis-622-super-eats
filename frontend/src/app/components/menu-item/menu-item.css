@@ -1,0 +1,47 @@
+.add-item-btn {
+    border-radius: 999px;
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Inter, sans-serif;
+}
+
+.add-item-btn:hover {
+  background-color: lightseagreen;
+}
+
+.menu-item-card {
+    font-family: Inter, sans-serif;
+    border: 1px solid;
+    border-radius: 9px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+}
+
+.h2 {
+    align-items: center;
+}
+
+.checkboxes {
+    height: 50px;
+    flex: auto;
+}
+
+.checkbox-border {
+    border: 1px solid;
+    border-radius: 9px;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.food-image {
+    border-radius: 999px;
+}

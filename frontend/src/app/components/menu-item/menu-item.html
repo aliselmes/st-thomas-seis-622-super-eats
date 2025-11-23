@@ -1,9 +1,12 @@
 <div class="menu-item-card">
     <h2>{{item.name}}</h2>
-    <p>Ingredients:</p>
-    <label *ngFor="let ingredient of item.availableIngredients">
+    <img src="{{item.name}}.jpeg" class="food-image" alt="{{item.name}}" width="150" height="150">
+    <h4>Ingredients:</h4>
+    <div class="checkbox-border">
+    <label class="checkboxes" *ngFor="let ingredient of item.availableIngredients">
         <input type="checkbox" [checked]="isIngredientSelected(ingredient)" (change)="onIngredientChange(ingredient, $event)" />{{ingredient}}
     </label>
+    </div>
     <p>{{item.price | currency}}</p>
-    <button (click)="addToCart()">Add to Cart</button>
+    <button class="add-item-btn" (click)="addToCart()">Add to Cart</button>
 </div>

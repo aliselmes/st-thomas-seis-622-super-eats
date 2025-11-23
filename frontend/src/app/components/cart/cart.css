@@ -1,0 +1,72 @@
+.cart-container {
+    font-family: Inter, sans-serif;
+}
+
+.cart-title {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-sizing: inherit;
+    position: relative;
+    background-color: lightseagreen;
+    color: black;
+}
+
+.remove-btn, .checkout-button, .add-remove-btn {
+    border-radius: 999px;
+    padding: 0.5em;
+    margin: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover, .checkout-button:hover, .add-remove-btn:hover {
+  background-color: lightseagreen;
+}
+
+.items-title {
+    text-align: center;
+}
+
+.cart-item {
+    border: 1px solid;
+    border-radius: 9px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: grey;
+}
+
+.ingredients-list {
+    border: 1px solid;
+    border-radius: 9px;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightseagreen;
+}
+
+.item-price {
+    margin: 5px;
+}
+
+.food-image {
+    border-radius: 999px;
+}
+
+.item-qty {
+    padding: 5px;
+}
+
+.empty-cart {
+    text-align: center;
+}
+
+.checkout {
+    margin-left: 20px;
+}
