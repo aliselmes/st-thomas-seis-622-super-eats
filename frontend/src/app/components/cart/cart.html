@@ -8,23 +8,26 @@
     </div>
 
     <!--Display items in the cart-->
-    <div *ngIf="cartItems.length > 0">
+    <div *ngIf="cartItems.length > 0" >
         <h2 class="items-title">Items:</h2>
+        <div class="cart-items-container">
         <div class="cart-item" *ngFor="let item of cartItems">
             <h3>{{item.name}}</h3>
+            <div class="item-price">{{item.price | currency}} each</div>
             <img src="{{item.name}}.jpeg" class="food-image" alt="{{item.name}}" width="100" height="100">
             <div *ngIf="item.selectedIngredients && item.selectedIngredients.length > 0">
                 <h4>Ingredients:</h4>
                 <p class="ingredients-list">{{item.selectedIngredients.join(', ')}}</p>
             </div>
-            <div class="item-price">{{item.price | currency}} each</div>
             <div class="item-controls">
+                <span>Quantity: </span>
                 <button class="add-remove-btn" (click)="decreaseQuantity(item)">-</button>
-                <span class="item-qty">Quantity: {{item.quantity}}</span>
+                <span class="item-qty">{{item.quantity}}</span>
                 <button class="add-remove-btn" (click)="increaseQuantity(item)">+</button>
                 <button class="remove-btn" (click)="removeItem(item.id)">Remove</button>
             </div>
             <div class="item-total">Total: {{item.price * item.quantity | currency}}</div>
+            </div>
         </div>
 
         <!--Total and Checkout-->

@@ -1,11 +1,23 @@
+.menu-item-card {
+    height: 600px;
+}
+
+.menu-item-card .checkbox-border {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: left;
+}
+
 .add-item-btn {
     border-radius: 999px;
     padding: 0.5em;
+    margin-top: 20px;
     border: none;
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: Inter, sans-serif;
+    font-weight: bold;
 }
 
 .add-item-btn:hover {

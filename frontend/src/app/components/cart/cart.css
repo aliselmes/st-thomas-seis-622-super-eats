@@ -16,6 +16,17 @@
     color: black;
 }
 
+.cart-items-container {
+    display: flex;
+    grid-template-columns: auto auto auto auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart-item {
+    width: 25%;
+}
+
 .remove-btn, .checkout-button, .add-remove-btn {
     border-radius: 999px;
     padding: 0.5em;
@@ -69,4 +80,19 @@
 
 .checkout {
     margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid black;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.checkout p {
+    margin-right: 25px;
+}
+
+.checkout button {
+    font-size: medium;
+    font-weight: bold;
 }
