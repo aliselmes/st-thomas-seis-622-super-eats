@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { MenuItem } from '../../models/menu-item';
-import { Extra } from '../../models/extra';
 
 @Component({
   selector: 'app-menu',
@@ -11,13 +10,11 @@ import { Extra } from '../../models/extra';
 })
 export class Menu implements OnInit {
     public menuItems: MenuItem[] = [];
-    public extras: Extra[] = [];
 
     constructor(private menuService: MenuService) {}
 
     ngOnInit(): void {
       this.loadMenuItems();
-      this.loadExtras();
     }
 
     loadMenuItems(): void {
@@ -28,19 +25,6 @@ export class Menu implements OnInit {
         },
         error: (error) => {
           console.log('Error loading items', error);
-        }
-      });
-    }
-
-    loadExtras(): void {
-      this.menuService.getExtras().subscribe({
-        next: (extras) => {
-          this.extras = extras;
-          console.log('Extras loaded', extras);
-        console.log('Extras length:', extras.length);
-        },
-        error: (error) => {
-          console.log('Error loading extras', error)
         }
       });
     }

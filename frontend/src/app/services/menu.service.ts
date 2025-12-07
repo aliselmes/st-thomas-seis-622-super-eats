@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { MenuItem } from '../models/menu-item';
-import { Extra } from '../models/extra';
 
 @Injectable({
   providedIn: 'root',
@@ -23,9 +22,5 @@ export class MenuService {
     return this.http.get<MenuItem>(`${this.apiUrl}/menu/${id}`);
   }
 
-  //Get all extras
-  getExtras(): Observable<Extra[]> {
-    return this.http.get<Extra[]>(`${this.apiUrl}/extras`);
-  }
   
 }
