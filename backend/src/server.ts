@@ -17,7 +17,7 @@ const extrasPath = path.join(__dirname, '..', 'data', 'extras.json');
 const cartPath = path.join(__dirname, '..', 'data', 'cart.json');
 
 //load data from the json files
-// Load data from JSON files
+
 let menuItems: IMenuItem[] = []
 let extras: IExtra[] = []
 let cart: ICartItem[] = []
