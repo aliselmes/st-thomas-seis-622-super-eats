@@ -8,8 +8,8 @@
     padding-bottom: 1rem;
     box-sizing: inherit;
     position: relative;
-    background-color: lightseagreen;
-    color: black;
+    background-color: rgb(37, 112, 229);
+    color: white;
     font-family: Inter, sans-serif;
   }
 
@@ -17,38 +17,6 @@
     display: grid;
     grid-template-columns: auto auto;
   }
-
-  .add-extras-btn {
-    border-radius: 999px;
-    padding: 0.5em;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: Inter, sans-serif;
-  }
-
-.add-extras-btn:hover {
-  background-color: lightseagreen;
-}
-
-.extras-section {
-    border: 1px solid;
-    border-radius: 9px;
-    margin: 5px;
-    padding: 5px;
-    background-color: grey;
-    font-family: Inter, sans-serif;
-    text-align: center;
-}
-
-.extras-grid {
-    border: 1px solid;
-    border-radius: 9px;
-    margin: 5px;
-    padding: 5px;
-    background-color: lightseagreen;
-}
 
 .food-image {
     border-radius: 999px;

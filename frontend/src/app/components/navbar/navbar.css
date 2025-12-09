@@ -35,7 +35,8 @@
 }
 
 .nav-link:hover {
-  background-color: lightseagreen;
+  background-color: rgb(37, 112, 229);
+  color: white;
 }
 
 .cart-count {
@@ -51,9 +52,5 @@
   font-weight: bold;
   position: absolute;
   right: 20px;
-  top: 25px;
-}
-
-.logo.a.h1 {
-  color: lightseagreen;
+  top: 75px;
 }

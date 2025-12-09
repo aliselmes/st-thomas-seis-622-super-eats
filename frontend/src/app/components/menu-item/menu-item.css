@@ -16,22 +16,23 @@
     outline: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: white;
     font-family: Inter, sans-serif;
     font-weight: bold;
 }
 
 .add-item-btn:hover {
-  background-color: lightseagreen;
+  background-color: rgb(37, 112, 229);
+  color: white;
 }
 
 .menu-item-card {
     font-family: Inter, sans-serif;
-    border: 1px solid;
     border-radius: 9px;
     margin: 10px;
     padding: 10px;
     text-align: center;
-    background-color: grey;
+    background-color: rgb(218, 213, 213);
 }
 
 .h2 {
@@ -44,11 +45,10 @@
 }
 
 .checkbox-border {
-    border: 1px solid;
     border-radius: 9px;
     margin: 5px;
     padding: 5px;
-    background-color: lightseagreen;
+    background-color: rgb(114, 163, 239);
     display: flex;
     flex-direction: column;
 }
